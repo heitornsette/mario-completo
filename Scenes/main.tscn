@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfuciuo3t0nk6"]
+
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_kma5h"]
+[ext_resource type="FontFile" uid="uid://b4j0a5t4sa2dx" path="res://Assets/Fonts/SuperMario256.ttf" id="2_v2mqr"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kma5h")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Titulo" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_v2mqr")
+theme_override_font_sizes/font_size = 70
+text = "Super Mario"
+horizontal_alignment = 1
+
+[node name="Botão_fase1" type="Button" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_v2mqr")
+theme_override_font_sizes/font_size = 30
+text = "Fase 1"
+
+[node name="Botão_fase2" type="Button" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_v2mqr")
+theme_override_font_sizes/font_size = 30
+text = "Fase 2"
+
+[node name="Botão_fase3" type="Button" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_v2mqr")
+theme_override_font_sizes/font_size = 30
+text = "Fase 3"
+
+[node name="Botão_fase4" type="Button" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_v2mqr")
+theme_override_font_sizes/font_size = 30
+text = "Fase 4"
+
+[connection signal="pressed" from="GridContainer/Botão_fase1" to="." method="_on_botão_fase_1_pressed"]
+[connection signal="pressed" from="GridContainer/Botão_fase2" to="." method="_on_botão_fase_2_pressed"]
+[connection signal="pressed" from="GridContainer/Botão_fase3" to="." method="_on_botão_fase_3_pressed"]
+[connection signal="pressed" from="GridContainer/Botão_fase4" to="." method="_on_botão_fase_4_pressed"]
